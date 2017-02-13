@@ -6,7 +6,7 @@
    be almost as must code as the function itself. */
 
 { fetchurl, stdenv, lua, callPackage, unzip, zziplib, pkgconfig
-, pcre, oniguruma, gnulib, tre, glibc, sqlite, openssl, expat
+, pcre, oniguruma, gnulib, tre, glibc, sqlite, openssl_1_0_2, expat
 , glib, gobject-introspection, libevent, zlib, autoreconfHook, gnum4
 , mysql, postgresql, cyrus_sasl
 , fetchFromGitHub, libmpack, which, fetchpatch, writeText
@@ -394,7 +394,7 @@ with self; {
       sha256 = "0wv8l7f7na7kw5xn8mjik2wpxbizl7zvvp5s7fcwvz9kl5jdpk5b";
     };
 
-    buildInputs = [ openssl ];
+    buildInputs = [ openssl_1_0_2 ];
 
     preBuild = ''
       makeFlagsArray=(
