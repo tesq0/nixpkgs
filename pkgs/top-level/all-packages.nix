@@ -5481,7 +5481,9 @@ in
 
   shout = nodePackages.shout;
 
-  shellinabox = callPackage ../servers/shellinabox { };
+  shellinabox = callPackage ../servers/shellinabox {
+    openssl = openssl_1_0_2;
+  };
 
   shrikhand = callPackage ../data/fonts/shrikhand { };
 
