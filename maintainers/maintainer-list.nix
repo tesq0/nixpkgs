@@ -5306,4 +5306,9 @@
     github = "minijackson";
     name = "Rémi Nicole";
   };
+  tesq0 = {
+  	email = "mikolaj.galkowski@gmail.com";
+    github = "tesq0";
+    name = "Mikolaj Galkowski";
+	};
 }

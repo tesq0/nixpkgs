@@ -37,6 +37,7 @@ stdenv.mkDerivation rec {
     description = "OmniSharp based on roslyn workspaces";
     platforms = platforms.linux;
     license = licenses.mit;
+    maintainers = with maintainers; [ tesq0 ];
   };
 
 }
