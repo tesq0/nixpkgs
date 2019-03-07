@@ -2,7 +2,7 @@
 
 callPackage ./generic.nix (rec {
   inherit Foundation libobjc;
-  version = "5.16.0.220";
-  sha256 = "1qwdmxssplfdb5rq86f1j8lskvr9dfk5c8hqz9ic09ml69r8c87l";
+  version = "5.18.0.268";
+  sha256 = "135vn6k2gci2bd73danv24rbdrz94whjxyg2nxxf7wxjh8a0ivh4";
   enableParallelBuilding = false;
 })
