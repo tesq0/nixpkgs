@@ -23355,8 +23355,12 @@ in
   newlib = callPackage ../development/misc/newlib { };
   newlibCross = callPackage ../development/misc/newlib {
     stdenv = crossLibcStdenv;
-  };
-  
+    };
+    
 	omnisharp-roslyn = callPackage ../development/tools/omnisharp-roslyn { };
+
+	logcatch = callPackage ../development/mobile/logcatch {
+		tk = tk-8_6;
+	};
 
 }
