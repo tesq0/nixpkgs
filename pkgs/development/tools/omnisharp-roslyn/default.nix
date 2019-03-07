@@ -1,19 +1,19 @@
 { stdenv
 , fetchurl
-, mono
+, mono5
 , makeWrapper
 }:
 
 stdenv.mkDerivation rec {
 
   name = "omnisharp-roslyn-${version}";
-  version = "1.32.7";
+  version = "1.32.8";
 
   outputs = [ "out" ];
 
   src = fetchurl {
     url = "https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v${version}/omnisharp-mono.tar.gz";
-    sha256 = "1fsgjvmfzj69jn8rmkbn7ci6c46r396hl1snlrsx5pm6zy8n3wh0";
+    sha256 = "0k2a4awmzb7ppll2skyzaa94n3hxqm35ffibl0sygldk3symzwgp";
   };
 
   buildInputs = [ makeWrapper ];
@@ -29,7 +29,7 @@ stdenv.mkDerivation rec {
     cd ..
 		cp -r src $out/
     ls -al $out/src
-    makeWrapper ${mono}/bin/mono $out/bin/omnisharp \
+    makeWrapper ${mono5}/bin/mono $out/bin/omnisharp \
     --add-flags "$out/src/OmniSharp.exe"
   '';
 
