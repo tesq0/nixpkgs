@@ -23363,4 +23363,6 @@ in
 		tk = tk-8_6;
 	};
 
+	locate-pointer = callPackage ../tools/X11/locate-pointer/default.nix { };
+
 }
