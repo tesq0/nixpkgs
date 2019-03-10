@@ -58,7 +58,7 @@ in stdenv.mkDerivation rec {
     makeWrapper $unitydir/Unity $out/bin/unity-editor \
     --prefix LD_PRELOAD : "$unitydir/libunity-nosuid.so" \
     --prefix PATH : "${binPath}" \
-    --prefix GTP_IM_MODULE : ""
+    --prefix GTK_IM_MODULE : ""
   '';
 
   preFixup = ''
