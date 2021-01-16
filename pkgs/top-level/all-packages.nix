@@ -13867,6 +13867,8 @@ in
     gdktarget = "x11";
   };
 
+  gtkextra = callPackage ../development/libraries/gtkextra { };
+
   gtk3 = callPackage ../development/libraries/gtk/3.x.nix {
     inherit (darwin.apple_sdk.frameworks) AppKit Cocoa;
   };
